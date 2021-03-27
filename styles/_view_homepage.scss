@@ -15,7 +15,7 @@
   grid-template-rows: 20vh 220px fit-content(10px) auto 10vh;
   grid-template-columns: 25px 1fr 10vw 1fr 25px;
 
-  .logo {
+  .company_name {
     grid-row: 2;
     grid-column: 4 / span 1;
 
@@ -31,9 +31,28 @@
     }
   }
 
-  .about-link {
-    display: block;
-    margin-top: 10vh;
+  @media screen and (max-width: 1210px) {
+    display: grid;
+    padding: 0px 15px;
+    grid-template-columns: auto minmax(calc(100vw - 30px), 660px) auto;
+    grid-template-rows: 5vh auto 5vh fit-content(150px) 5vh auto 10vh;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100vw - 34px);
+
+    .company_name {
+      grid-row: 2;
+      grid-column: 2;
+      padding-bottom: 10px;
+      &::after {
+        bottom: 0;
+      }
+    }
+
+    .description {
+      grid-row: 4;
+      grid-column: 2;
+    }
   }
 }
 
@@ -43,6 +62,9 @@
   align-self: center;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 1210px) {
+    grid-row: 6;
+  }
 }
 
 .homepage-product-preview {
@@ -91,5 +113,18 @@
 
   & + & {
     margin-top: 20px;
+  }
+
+  @media screen and (max-width: 1210px) {
+    height: auto;
+    align-items: center;
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    .property + .property {
+      margin-top: 10px;
+    }
   }
 }

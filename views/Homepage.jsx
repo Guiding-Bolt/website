@@ -13,7 +13,7 @@ function Homepage() {
 function Banner() {
   return (
     <div className="homepage-banner">
-      <Title className="logo">
+      <Title className="company_name">
         Guiding
         <br />
         Bolt
