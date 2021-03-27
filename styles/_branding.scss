@@ -1,0 +1,79 @@
+@use 'styles/const';
+
+.gb-title {
+  position: relative;
+  padding-top: 0.25em;
+  line-height: 1em;
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   height: 0.1em;
+  //   background: const.$highlight;
+  //   top: 0;
+  //   left: 0;
+
+  //   --width: 3.5em;
+  //   animation: expand-width;
+  //   animation-duration: 800ms;
+  //   animation-fill-mode: forwards;
+  // }
+  &::after {
+    content: '';
+    position: absolute;
+    height: 0.1em;
+    background: const.$highlight;
+    bottom: 36px;
+    left: 0;
+
+    --width: 2em;
+    animation: expand-width;
+    animation-duration: 800ms;
+    animation-fill-mode: forwards;
+  }
+
+  &.small {
+    font-weight: 400;
+  }
+}
+
+.gb-text {
+  margin: 0;
+  font-size: 2.5em;
+  max-width: 34ch;
+  font-weight: 200;
+  letter-spacing: 1px;
+
+  em {
+    font-style: normal;
+    color: const.$highlight;
+  }
+}
+
+.gb-button {
+  border: none;
+  outline: none;
+  display: block;
+  padding: 10px 12px;
+  font-size: 1.7em;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  background: const.$text;
+  color: const.$background;
+
+  &.highlight {
+    background: const.$highlight;
+    color: const.$text;
+  }
+
+  &:hover {
+    filter: brightness(105%);
+  }
+
+  &:active {
+    filter: none;
+  }
+}

@@ -1,0 +1,40 @@
+@use 'styles/const';
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond&family=Patua+One&family=Prompt:ital,wght@0,100;0,600;1,900&family=Righteous&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap');
+
+* {
+  font-family: 'EB Garamond', monospace;
+  // font-family: 'Prompt', sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+
+  &,
+  & > a {
+    font-family: 'Anonymous Pro', monospace;
+    font-weight: 600;
+    color: inherit;
+  }
+}
+
+h1 {
+  font-family: 'Righteous', cursive;
+  font-size: 5em;
+}
+
+a {
+  color: const.$text;
+  font-weight: 600;
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+  }
+}

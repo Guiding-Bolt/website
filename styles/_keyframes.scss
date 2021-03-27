@@ -1,0 +1,8 @@
+@keyframes expand-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--width, 100%);
+  }
+}

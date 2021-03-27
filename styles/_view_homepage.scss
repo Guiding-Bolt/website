@@ -1,0 +1,95 @@
+@use 'styles/const';
+@use 'styles/typography';
+
+.homepage-container {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.homepage-banner {
+  min-height: 100vh;
+  height: fit-content;
+  width: min(100%, 1280px);
+  margin: auto;
+  display: grid;
+  grid-template-rows: 20vh 220px fit-content(10px) auto 10vh;
+  grid-template-columns: 25px 1fr 10vw 1fr 25px;
+
+  .logo {
+    grid-row: 2;
+    grid-column: 4 / span 1;
+
+    font-size: 4.5em;
+  }
+
+  .description {
+    grid-row: 3 / span 1;
+    grid-column: 4 / span 1;
+
+    a {
+      color: const.$highlight;
+    }
+  }
+
+  .about-link {
+    display: block;
+    margin-top: 10vh;
+  }
+}
+
+.homepage-products {
+  grid-row: 2 / span 2;
+  grid-column: 2 / span 1;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-product-preview {
+  height: 54px;
+  padding: 15px;
+  color: const.$text;
+  border: 4px solid;
+  border-radius: 10px;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .logo {
+    height: 54px;
+    width: 54px;
+    border-radius: 10px;
+  }
+
+  .name {
+    font-weight: 400;
+    font-size: 1.5em;
+    width: min-content;
+
+    & + .property {
+      margin-top: 6px;
+    }
+  }
+
+  .property {
+    font-weight: 400;
+    font-size: 1.2em;
+    white-space: nowrap;
+    width: min-content;
+
+    & + & {
+      margin-top: 6px;
+    }
+  }
+
+  &:hover {
+    color: const.$highlight;
+  }
+
+  & + & {
+    margin-top: 20px;
+  }
+}

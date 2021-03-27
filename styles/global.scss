@@ -1,0 +1,16 @@
+@forward 'styles/typography';
+@forward 'styles/branding';
+@forward 'styles/keyframes';
+
+@use 'styles/const';
+@use 'styles/view_homepage';
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: const.$background;
+  color: const.$text;
+}
